@@ -7,5 +7,14 @@ use App\Travel;
 
 class HomeController extends Controller
 {
-    
+  public function index() {
+   
+    $travels = Travel::all();
+   
+    $data = [
+      'travels' => $travels
+    ];
+
+    return view('home', $data);
+  }
 }

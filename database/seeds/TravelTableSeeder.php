@@ -17,12 +17,16 @@ class TravelTableSeeder extends Seeder
             $new_travel = new Travel();
             $new_travel->order_date = $faker->dateTime();
             $new_travel->departure_company = $faker->word();
-            $new_travel->departure_ticket = $faker->words(5, true);
+            $new_travel->departure_ticket = $faker->words(2, true);
             $new_travel->hotel_name = $faker->words(5, true);
             $new_travel->hotel_info = $faker->text(100);
             $new_travel->stay_start_date = $faker->dateTime();
             $new_travel->end_of_stay_date = $faker->dateTime();
-            $new_travel->total_price = $faker->dateTime();
+            $new_travel->total_price = $faker->randomNumber(5, true);
+            $new_travel->paid = rand(0,1);
+            $new_travel->order_info = $faker->text(100);
+             	
+            $new_travel->save();
         }
     }
 }
