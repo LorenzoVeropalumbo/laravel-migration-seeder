@@ -5,7 +5,7 @@
 
     <div>
         @foreach ($travels as $travel)
-            {{-- Single house --}}
+            {{-- Single Travel --}}
             <div>
               <div>Data di inizio soggiorno: {{ $travel->stay_start_date }}</div>
               <div>Data di fine soggiorno: {{ $travel->end_of_stay_date }}</div>
